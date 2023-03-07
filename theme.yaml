@@ -1,0 +1,16 @@
+name: "如水网"
+license: "MIT"
+licenselink: "https://github.com/hugo-theme/rs/blob/main/LICENSE"
+description: "如水网主题"
+min_version: "0.41.0"
+
+author:
+  name: "rushui"
+  homepage: "https://www.rushui.net"
+
+# If porting an existing theme
+original:
+  name: "rs"
+  homepage: "https://github.com/hugo-theme/rs"
+  repo: "https://github.com/hugo-theme/rs.git"
+

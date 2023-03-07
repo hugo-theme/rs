@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main role="main" class="container">
+    {{- partial "announcement.html" . -}}
+    <div class="row">
+        <div class="col-md-9">
+            {{ range .Pages }}
+            {{- partial "list-card.html" . -}}
+            {{ end }}
+        </div>
+        <div class="col-md-3">
+            {{- partial "categorys.html" . -}}
+            {{- partial "related.html" . -}}
+            {{- partial "tags.html" . -}}
+        </div>
+    </div>
+</main>
+
+{{ end }}

@@ -1,0 +1,10 @@
+{{ $colors := .Site.Params.colors}}
+{{with .Site.Taxonomies.tags}}
+        <div class="card">
+            <div class="card-header">热点标签</div>
+            <div class="card-body p-2">
+                {{$i := 0}}{{range $name,$val := .}}<a href="{{relURL "tags/"}}{{$name}}"><span class="badge badge-pill badge-{{index $colors $i}}">{{ $name }}({{.Count}})</span></a> {{if ge $i (len $colors)}}{{$i = 0}}{{else}} {{ $i = add $i 1 }}{{end}}{{end}}
+            </div>
+        </div>
+        <div class="my-3"></div>
+{{end}}

@@ -1,0 +1,13 @@
+{{ with .Site.Taxonomies.categories }}
+    <div class="card">
+        <div class="card-header">分类</div>
+        <div class="card-body p-2">
+            <ul class="list-unstyled">
+                {{range $name,$val := .}}
+                <li class="m-2 text-nowrap text-truncate"><a href="{{relURL "categories/"}}{{ $name }}" class="text-secondary">{{ $name }} <small>({{ $val.Count }})</small></a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="my-3"></div>
+{{ end }}
