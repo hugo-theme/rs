@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col">
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            {{.Site.Params.announcement}}
+            {{.Site.Params.announcement | safeHTML}}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
