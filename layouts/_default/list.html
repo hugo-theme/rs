@@ -3,9 +3,10 @@
     {{- partial "announcement.html" . -}}
     <div class="row">
         <div class="col-md-9">
-            {{ range .Pages }}
+            {{ range (.Paginate .RegularPagesRecursive).Pages }}
             {{- partial "list-card.html" . -}}
             {{ end }}
+            {{ template "_internal/pagination.html" . }}
         </div>
         <div class="col-md-3">
             {{- partial "categorys.html" . -}}

@@ -15,7 +15,7 @@
                             <p class="card-text">{{ .Content }}</p>
                             <p class="downline"></p>
                             <p>
-                                <div class="text-muted"> 发布日期：{{ .Date.Format "2006-01-02 15:04" }} 字数：{{ .WordCount }}</div>
+                                <div class="text-muted"> 发布日期：{{ .Date.Format "2006-01-02 15:04" }} 字数：{{ .WordCount }} 用时<span class="more-meta"> {{ .ReadingTime  }}分钟</div>
                                 {{ with .GetTerms "tags" }}
                                 <div class="text-muted"> tags：{{ range $index,$val := . }}<a href="{{ $val.RelPermalink }}"><span class="badge badge-pill badge-{{index .Site.Params.colors $index}}">{{ $val.LinkTitle }}</span></a> {{ end }}</div>
                                 {{ end }}

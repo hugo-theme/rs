@@ -11,3 +11,4 @@
 </footer>
 <script src="{{relURL "js/jquery.slim.min.js"}}"></script>
 <script src="{{relURL "js/bootstrap.bundle.min.js"}}"></script>
+{{if .Site.Params.tongji}}{{.Site.Params.tongji | safeHTML}}{{end}}
