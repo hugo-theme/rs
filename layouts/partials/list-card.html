@@ -4,8 +4,10 @@
         <div class="col-md-2 m-auto">
             <a href="{{.Permalink}}"><img class="mx-auto img-fluid card-img" src="{{relURL .Params.thumbnail}}" alt="{{.Title}}"></a>
         </div>
-        {{end}}
         <div class="col-md-10">
+        {{else}}
+        <div class="col-md-12">
+        {{end}}
             <div class="card-body">
                 <h5 class="card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
                 <p class="card-text"><a href="{{.Permalink}}">{{.Description}}</a></p>

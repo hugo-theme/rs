@@ -1,5 +1,5 @@
 body {
-    padding: 75px 0 0 0;
+    padding-top: 75px;
 }
 @font-face {
     font-family: rushui;
@@ -19,6 +19,9 @@ a{
 }
 .card-title a{
     font-size: 1.25rem
+}
+#TableOfContents {
+    display: none;
 }
 /** default h1,h2,h3,h4,h5,h6 fontsize **/
 h1{
@@ -80,4 +83,18 @@ table thead {
 
 table td {
     background-color: transparent;
+}
+
+@media screen and (min-width: 1680px){
+	/** ofc **/
+    #TableOfContents {
+        display: block;
+        position: fixed;
+        top: 100px;
+        left: 0;
+    }
+    #TableOfContents ul {
+        list-style-type: none;
+        padding-inline-start: 15px;
+    }
 }
