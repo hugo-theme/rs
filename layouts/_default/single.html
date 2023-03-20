@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main role="main" class="container">
+<main role="main" class="container main-container">
     <div class="row">
         <div class="col-md-9">
             <div class="card">
@@ -48,7 +48,6 @@
             <div class="my-3"></div>
         </div>
         <div class="col-md-3">
-            {{- partial "toc.html" . -}}
             {{- partial "categorys.html" . -}}
             {{- partial "related.html" . -}}
             {{- partial "tags.html" . -}}

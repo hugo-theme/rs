@@ -24,7 +24,7 @@
                         {{ if .HasChildren }}
                         <li class="nav-item  {{if eq .Identifier $currentPage.Section }}active{{ end }} dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">关于</a>
+                            aria-haspopup="true" aria-expanded="false">{{ .Name }}</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 {{ range .Children }}
                                 <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
