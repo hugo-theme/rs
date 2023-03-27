@@ -1,11 +1,13 @@
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="RuShui">
-<title>{{if .Title}}{{.Title}} - {{end}}{{.Site.Title}}</title>
-{{if .Keywords}}{{$str := delimit .Keywords ","}}<meta name="keywords" content='{{$str}}'>{{end}}
-{{if .Description}}<meta name="description" content="{{.Description}}">{{end}}
-<link href="{{relURL "css/bootstrap.min.css"}}" rel="stylesheet">
-<link href="{{relURL "css/rs.css"}}" rel="stylesheet">
-<link href="{{relURL "favicon.ico"}}" rel="shortcut icon">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="RuShui">
+    <title>{{if .Title}}{{.Title}} - {{end}}{{.Site.Title}}</title>
+    {{if .Keywords}}{{$str := delimit .Keywords ","}}<meta name="keywords" content='{{$str}}'>{{end}}
+    <meta name="description" content="{{if .Description}}{{.Description}}{{else}}{{.Title}}{{end}}">
+    <link href="{{relURL "css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{relURL "css/rs.css"}}" rel="stylesheet">
+    <link href="{{relURL "favicon.ico"}}" rel="shortcut icon">
+</head>
