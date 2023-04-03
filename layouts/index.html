@@ -3,7 +3,7 @@
     {{- partial "announcement.html" . -}}
     <div class="row">
         <div class="col-md-9">
-            {{ range (.Paginate .Site.RegularPages).Pages }}
+            {{ range where (.Paginate .Site.RegularPages).Pages "Section" "!=" "docs"}}
             {{- partial "list-card.html" . -}}
             {{ end }}
             {{ template "_internal/pagination.html" . }}
