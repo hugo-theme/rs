@@ -66,9 +66,10 @@ h5{
     font-weight: 600;
     margin-top: 15px;
     padding-bottom: 5px;
-    border-bottom: #ccc 1px solid;
 }
 .filetree ul li ul li span {
+    display: block;
+    font-weight: 500;
     margin-top: 5px;
     border-bottom:0;
 }

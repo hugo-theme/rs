@@ -1,0 +1,56 @@
+
+<main role="main" class="container main-container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div class="card-body">
+                            <div class="downline">
+                                <h1 class="card-title">{{ .Title }}</h1>
+                            </div>
+                            {{if .Params.banner}}
+                            <p><img class="mx-auto img-fluid card-img" src="/{{.Params.banner}}" alt="{{.Title}}"></p>
+                            {{end}}
+                            <p class="card-text">{{ .Content }}</p>
+                            <p class="downline"></p>
+                            <p>
+                                <div class="text-muted"> 发布日期：{{ .Date.Format "2006-01-02 15:04" }} 字数：{{ .WordCount }} 用时<span class="more-meta"> {{ .ReadingTime  }}分钟</div>
+                                {{ with .GetTerms "tags" }}
+                                <div class="text-muted"> tags：{{ range $index,$val := . }}<a href="{{ $val.RelPermalink }}"><span class="badge badge-pill badge-{{index .Site.Params.colors $index}}">{{ $val.LinkTitle }}</span></a> {{ end }}</div>
+                                {{ end }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3"></div>
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ with .PrevInSection }}
+                    <div class="card">
+                        <div class="card-body">
+                                <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="col-sm-6 align-self-end">
+                    {{ with .NextInSection }}
+                    <div class="card">
+                        <div class="card-body">
+                                <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="my-3"></div>
+        </div>
+        <div class="col-md-3">
+            {{- partial "categorys.html" . -}}
+            {{- partial "related.html" . -}}
+            {{- partial "tags.html" . -}}
+        </div>
+    </div>
+</main>
