@@ -118,7 +118,7 @@ table td {
     background-color: transparent;
 }
 
-@media screen and (min-width: 1680px){
+@media screen and (min-width: 1080px){
 	/** ofc **/
     #TableOfContents {
         display: block;
