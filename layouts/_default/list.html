@@ -1,6 +1,5 @@
 {{ define "main" }}
 <main role="main" class="container main-container">
-    {{- partial "announcement.html" . -}}
     <div class="row">
         <div class="col-md-9">
             {{ range (.Paginate .RegularPagesRecursive).Pages }}
